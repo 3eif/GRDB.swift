@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28FE6FCA2ED5831C007A6907 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 28FE6FC92ED5831C007A6907 /* sqlite3ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E13D2F82769BC230037588C /* DatabaseBackupProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13D2F72769BC230037588C /* DatabaseBackupProgress.swift */; };
 		4ECF777E273AFBAB001685F5 /* BackupTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF777A273AFB72001685F5 /* BackupTestCase.swift */; };
 		56012B6A2573FAE700B4925B /* CommonTableExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56012B682573FAE600B4925B /* CommonTableExpressionTests.swift */; };
@@ -456,6 +457,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28FE6FC92ED5831C007A6907 /* sqlite3ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sqlite3ext.h; path = SQLiteCustom/sqlite3ext.h; sourceTree = "<group>"; };
 		4E13D2F72769BC230037588C /* DatabaseBackupProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseBackupProgress.swift; sourceTree = "<group>"; };
 		4ECF777A273AFB72001685F5 /* BackupTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupTestCase.swift; sourceTree = "<group>"; };
 		56012B682573FAE600B4925B /* CommonTableExpressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableExpressionTests.swift; sourceTree = "<group>"; };
@@ -1814,6 +1816,7 @@
 				56C494421ED726C500CC72AF /* GRDBDeploymentTarget.xcconfig */,
 				F3BA7FF31CFB23E4003DC1BA /* SQLiteLib.xcodeproj */,
 				EED476F41CFD174D0026A4EC /* Customize */,
+				28FE6FC92ED5831C007A6907 /* sqlite3ext.h */,
 			);
 			name = GRDBCustomSQLite;
 			sourceTree = "<group>";
@@ -1835,6 +1838,7 @@
 			files = (
 				F3BA80931CFB2F13003DC1BA /* GRDB.h in Headers */,
 				56C9EB9B2495324700FE5D55 /* grdb_config.h in Headers */,
+				28FE6FCA2ED5831C007A6907 /* sqlite3ext.h in Headers */,
 				56781B08243F7B5300650A83 /* GRDB-Bridging.h in Headers */,
 				F3BA80951CFB2F18003DC1BA /* sqlite3.h in Headers */,
 				EED476F21CFD17270026A4EC /* GRDBCustomSQLite-USER.h in Headers */,
