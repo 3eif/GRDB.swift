@@ -3,11 +3,13 @@ Custom SQLite Builds
 
 By default, GRDB uses the version of SQLite that ships with the target operating system.
 
-**You can build GRDB with a custom build of [SQLite 3.47.2](https://www.sqlite.org/changes.html).**
+**You can build GRDB with a custom build of [SQLite 3.53.4](https://www.sqlite.org/changes.html).**
 
 A custom SQLite build can activate extra SQLite features, and extra GRDB features as well, such as support for the [FTS5 full-text search engine](../../../#full-text-search), and [SQLite Pre-Update Hooks](https://swiftpackageindex.com/groue/GRDB.swift/documentation/grdb/transactionobserver).
 
 GRDB builds SQLite with [swiftlyfalling/SQLiteLib](https://github.com/swiftlyfalling/SQLiteLib), which uses the same SQLite configuration as the one used by Apple in its operating systems, and lets you add extra compilation options that leverage the features you need.
+
+This fork keeps SQLiteLib's Xcode project in `SQLiteCustom/SQLiteLib`, with an SQLite amalgamation generated from the canonical sources by `SQLiteCustom/SQLiteLib/scripts/update-sqlite.sh`.
 
 > Warning: The technique described here is not compatible with the Swift Package Manager (SPM). It will create [build issues](https://github.com/groue/GRDB.swift/issues/1709) with SPM companion librairies such as [GRDBQuery](https://github.com/groue/GRDBQuery) or [GRDBSnapshotTesting](https://github.com/groue/GRDBSnapshotTesting).   
 
@@ -18,7 +20,6 @@ GRDB builds SQLite with [swiftlyfalling/SQLiteLib](https://github.com/swiftlyfal
     ```sh
     cd [GRDB directory]
     git checkout [latest tag]
-    git submodule update --init SQLiteCustom/src
     ```
 
 2. Choose your [extra compilation options](https://www.sqlite.org/compile.html). For example, `SQLITE_ENABLE_FTS5`, `SQLITE_ENABLE_PREUPDATE_HOOK`.
@@ -102,7 +103,7 @@ GRDB builds SQLite with [swiftlyfalling/SQLiteLib](https://github.com/swiftlyfal
             rsync -a "$SOURCE" "$DESTINATION"
         }
 
-        SyncFileChanges $SQLITELIB_XCCONFIG_USER_PATH "${GRDB_SOURCE_PATH}/SQLiteCustom/src" "SQLiteLib-USER.xcconfig"
+        SyncFileChanges $SQLITELIB_XCCONFIG_USER_PATH "${GRDB_SOURCE_PATH}/SQLiteCustom/SQLiteLib" "SQLiteLib-USER.xcconfig"
         SyncFileChanges $CUSTOMSQLITE_XCCONFIG_USER_PATH "${GRDB_SOURCE_PATH}/SQLiteCustom" "GRDBCustomSQLite-USER.xcconfig"
         SyncFileChanges $CUSTOMSQLITE_H_USER_PATH "${GRDB_SOURCE_PATH}/SQLiteCustom" "GRDBCustomSQLite-USER.h"
 

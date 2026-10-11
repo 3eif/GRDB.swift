@@ -115,3 +115,9 @@ Tests/SPM/Packages
 
 # Test products
 Tests/products
+
+# SQLiteLib USER configuration file, copied in before a build
+SQLiteCustom/SQLiteLib/SQLiteLib-USER.xcconfig
+
+# Working tree of the SQLiteLib submodule that SQLiteCustom/SQLiteLib replaced
+SQLiteCustom/src/

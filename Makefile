@@ -393,19 +393,15 @@ test_performance:
 	  build-for-testing test-without-building
 
 # Target that setups SQLite custom builds with extra compilation options.
-SQLiteCustom: SQLiteCustom/src/sqlite3.h
+SQLiteCustom:
 	echo '/* Makefile generated */' > SQLiteCustom/GRDBCustomSQLite-USER.h
 	echo '#define SQLITE_ENABLE_PREUPDATE_HOOK' >> SQLiteCustom/GRDBCustomSQLite-USER.h
 	echo '#define SQLITE_ENABLE_FTS5' >> SQLiteCustom/GRDBCustomSQLite-USER.h
 	echo '#define SQLITE_ENABLE_SNAPSHOT' >> SQLiteCustom/GRDBCustomSQLite-USER.h
 	echo '// Makefile generated' > SQLiteCustom/GRDBCustomSQLite-USER.xcconfig
 	echo 'CUSTOM_OTHER_SWIFT_FLAGS = -D SQLITE_ENABLE_PREUPDATE_HOOK -D SQLITE_ENABLE_FTS5 -D SQLITE_ENABLE_SNAPSHOT' >> SQLiteCustom/GRDBCustomSQLite-USER.xcconfig
-	echo '// Makefile generated' > SQLiteCustom/src/SQLiteLib-USER.xcconfig
-	echo 'CUSTOM_SQLLIBRARY_CFLAGS = -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_SNAPSHOT' >> SQLiteCustom/src/SQLiteLib-USER.xcconfig
-
-# Makes sure the SQLiteCustom/src submodule has been downloaded
-SQLiteCustom/src/sqlite3.h:
-	$(GIT) submodule update --init SQLiteCustom/src
+	echo '// Makefile generated' > SQLiteCustom/SQLiteLib/SQLiteLib-USER.xcconfig
+	echo 'CUSTOM_SQLLIBRARY_CFLAGS = -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_SNAPSHOT' >> SQLiteCustom/SQLiteLib/SQLiteLib-USER.xcconfig
 
 
 # Documentation
@@ -445,7 +441,6 @@ doc:
 distclean:
 	$(GIT) reset --hard
 	$(GIT) clean -dffx .
-	rm -rf SQLiteCustom/src && $(GIT) checkout -- SQLiteCustom/src
 
 clean:
 	$(SWIFT) package reset

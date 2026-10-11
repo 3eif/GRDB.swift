@@ -53,9 +53,9 @@
 		EED476F11CFD16FF0026A4EC /* GRDBCustomSQLite-USER.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GRDBCustomSQLite-USER.h"; path = "SQLiteCustom/GRDBCustomSQLite-USER.h"; sourceTree = "<group>"; };
 		F3BA7FEE1CFB23B7003DC1BA /* GRDB.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = GRDB.xcconfig; path = SQLiteCustom/GRDB.xcconfig; sourceTree = "<group>"; };
 		F3BA7FEF1CFB23BF003DC1BA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = SQLiteCustom/module.modulemap; sourceTree = "<group>"; };
-		F3BA7FF01CFB23C9003DC1BA /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = SQLiteCustom/src/sqlite3.h; sourceTree = "<group>"; };
+		F3BA7FF01CFB23C9003DC1BA /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = SQLiteCustom/SQLiteLib/sqlite3.h; sourceTree = "<group>"; };
 		F3BA7FF11CFB23D3003DC1BA /* GRDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRDB.h; path = SQLiteCustom/GRDB.h; sourceTree = "<group>"; };
-		F3BA7FF31CFB23E4003DC1BA /* SQLiteLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLiteLib.xcodeproj; path = SQLiteCustom/src/SQLiteLib.xcodeproj; sourceTree = "<group>"; };
+		F3BA7FF31CFB23E4003DC1BA /* SQLiteLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLiteLib.xcodeproj; path = SQLiteCustom/SQLiteLib/SQLiteLib.xcodeproj; sourceTree = "<group>"; };
 		F3BA805A1CFB2BB2003DC1BA /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BA809B1CFB2F6F003DC1BA /* GRDBCustomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRDBCustomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BA813A1CFB3402003DC1BA /* GRDBCustomSQLite-USER.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "GRDBCustomSQLite-USER.xcconfig"; path = "SQLiteCustom/GRDBCustomSQLite-USER.xcconfig"; sourceTree = "<group>"; };
